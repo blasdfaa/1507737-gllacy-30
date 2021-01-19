@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Viktor Zdorovcew](https://up.htmlacademy.ru/htmlcss/30/user/1507737).
-* Наставник: `Елена Асташина`.
+* Наставник: [Елена Асташина](https://htmlacademy.ru/profile/helen_astashina).
 
 ---
 
