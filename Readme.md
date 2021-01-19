@@ -1,12 +1,12 @@
 # Личный проект «Глейси»
 
 * Студент: [Viktor Zdorovcew](https://up.htmlacademy.ru/htmlcss/30/user/1507737).
-* Наставник: `Неизвестно`.
+* Наставник: `Елена Асташина`.
 
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
+_`.editorconfig`, `.gitattributes`ЁЁ, `.gitignore`, `Contributing.md`, `Readme.md`._
 
 ---
 
