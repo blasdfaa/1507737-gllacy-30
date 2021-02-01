@@ -40,6 +40,7 @@
   --btn-shadow-color: rgba(172, 16, 0, 0.64);
   --btn-shadow-hover-color: #AC1000;
   --btn-shadow-active-color: #942718;
+  --btn-text-shadow-color: rgba(160, 32, 11, 0.76);
 
   --btn-tiny-color: rgba(255, 255, 255, 0.2);
 
@@ -58,7 +59,6 @@
   --popular-shadow-hover-color: rgba(0, 0, 0, 0.03);
   --price-text-shadow-color: rgba(49, 50, 53, 0.5);
 
-  --subscribe-btn-shadow-color: rgba(160, 32, 11, 0.76);
   --subscribe-text-color: #5A5A5A;
 
   --input-text-color: #999999;
@@ -69,6 +69,7 @@
   --social-border-active-color: rgba(255, 255, 255, 0.7);
 
   --basic-link-hover: #FFBC9E;
+  --border-link-color: rgba(255, 255, 255, 0.2);
 
   --section-bg-color: #F8F7F4;
 
@@ -94,8 +95,8 @@ img {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--basic-white);
+  border-bottom: 1px solid var(--border-link-color);
+  color: currentColor;
 }
 
 .container {
@@ -153,7 +154,7 @@ a {
   font-size: 32px;
   line-height: 30px;
   color:var(--basic-white);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
   box-shadow: 0px 2px 2px var(--btn-shadow-color);
   background: var(--btn-color);
   border: none;
@@ -203,45 +204,45 @@ a {
 
 /* Input */
 
-input {
+.field {
   font: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: var(--basic-dark);
   background: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--input-border-color);
 }
 
-input::placeholder {
+.field::placeholder {
   font-weight: 400;
 }
 
-input:hover {
-  border: 2px solid rgba(178, 178, 178, 0.52);
+.field:hover {
+  border: 2px solid var(--input-border-color);
 }
 
-input:focus {
+.field:focus {
   border: 2px solid var(--input-focus-border-color);
 }
 
 /* Body themes */
 
-.mantle {
+.main-page--mantle {
   background: url('../img/promo-slider/slider-1.png') var(--theme-mantle-color) top center no-repeat;
 }
 
-.regent-gray {
+.main-page--regent {
   background: url('../img/promo-slider/slider-2.png') var(--theme-egent-gray-color) top center no-repeat;
 }
 
-.pharlap {
+.main-page--pharlap {
   background: url('../img/promo-slider/slider-3.png') var(--theme-pharlap-color) top center no-repeat;
 }
 
 /* Logo */
 
-.page-header__logo {
+.page-header__logo a {
   border: none;
 }
 
@@ -400,7 +401,7 @@ input:focus {
   background: url('../img/bg/wafer-pattern.jpg') 0 0 repeat;
 }
 
-.features__title {
+.features__lead {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -431,7 +432,7 @@ input:focus {
   color: var(--basic-dark);
 }
 
-.blog-notice__link a {
+.blog-notice__link {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -590,45 +591,25 @@ input:focus {
 
 /* Catalog filter */
 
-.sorting {
+.filter__group {
   border: none;
 }
 
-.sorting__title {
+.filter__label {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
 }
 
-.sorting__select {
+.filter__select {
   color: var(--basic-white);
   background: var(--btn-tiny-color);
   border: none;
   cursor: pointer;
 }
 
-.sorting__select:hover {
+.filter__select:hover {
   color: var(--basic-dark);
-}
-
-.price {
-  border: none;
-}
-
-.price__title {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.fat-content {
-  border: none;
-}
-
-.fat-content__title {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 .fat-content__list {
@@ -641,16 +622,6 @@ input:focus {
   line-height: 18px;
 }
 
-.fillers {
-  border: none;
-}
-
-.fillers__title {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-}
-
 .fillers__list {
   list-style: none;
 }
@@ -661,7 +632,7 @@ input:focus {
   line-height: 18px;
 }
 
-.catalog-filter__btn {
+.filter__btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -670,12 +641,12 @@ input:focus {
   border: 2px solid var(--basic-white);
 }
 
-.catalog-filter__btn:hover {
+.filter__btn:hover {
   color: var(--basic-dark);
   background: var(--basic-white);
 }
 
-.catalog-filter__btn:active {
+.filter__btn:active {
   box-shadow: inset 0px 2px 1px var(--menu-shadow-active-color);
 }
 
