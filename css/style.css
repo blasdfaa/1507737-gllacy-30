@@ -44,6 +44,8 @@
 
   --btn-tiny-color: rgba(255, 255, 255, 0.2);
 
+  --cart-active-color: #E84D37;
+
   --btn-slider-hover-color: rgba(255, 255, 255, 0.4);
 
   --menu-active-color: #EDEDED;
@@ -76,10 +78,18 @@
   --sidebar-bg-color: #FEFEFE;
 
   --modal-link-hover: #E84D37;
+
+  --pattern-bg-color: #E3DDBB;
 }
 
 
 /* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -94,8 +104,7 @@ img {
 }
 
 a {
-  text-decoration: none;
-  border-bottom: 1px solid var(--border-link-color);
+  text-decoration: none; /*  вынести в класс */
   color: currentColor;
 }
 
@@ -105,88 +114,39 @@ a {
   margin: 0 auto;
 }
 
+/* Links */
+
+.base-link {
+  border-bottom: 1px solid var(--border-link-color);
+}
+
 /* Buttons */
 
-.btn-tiny {
+.btn {
   font: inherit;
   text-align: center;
   vertical-align: middle;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--basic-white);
-  background: var(--btn-tiny-color);
   border: none;
   cursor: pointer;
 }
 
-.btn-tiny:hover,
-.btn-tiny:active,
-.btn-tiny:focus {
-  background-color: var(--basic-white);
-  color: var(--basic-dark);
-}
+/* User navigation buttons */
 
-.btn-tiny:hover path,
-.btn-tiny:active path,
-.btn-tiny:focus path {
-  fill: var(--basic-dark);
-}
-
-.btn-tiny:disabled {
-  cursor: default;
-}
-
-.btn-tiny:disabled:hover {
-  color: var(--basic-white);
-  background-color: var(--btn-tiny-color);
-}
-
-.btn-tiny:disabled:hover path {
-  fill: var(--basic-white);
-}
-
-.btn-large {
-  font: inherit;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 30px;
-  color:var(--basic-white);
-  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
-  box-shadow: 0px 2px 2px var(--btn-shadow-color);
-  background: var(--btn-color);
-  border: none;
-  cursor: pointer;
-}
-
-.btn-large:hover {
-  background: var(--btn-hover-color);
-  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
-}
-
-.btn-large:active {
-  background: var(--btn-active-color);
-  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
-}
-
-.btn-slider {
+.btn--slider {
   width: 21px;
   height: 21px;
   border: 2px solid var(--basic-white);
   border-radius: 50%;
   background: none;
-  cursor: pointer;
 }
 
-.btn-slider:hover {
+.btn--slider:hover {
   background: var(--btn-slider-hover-color);
 }
 
-.btn-slider:focus,
-.btn-slider--current,
-.btn-slider--current:hover {
+.btn--slider:focus,
+.btn--slider-current,
+.btn--slider-current:hover {
   background: var(--basic-white);
   cursor: default;
 }
@@ -229,21 +189,15 @@ a {
 /* Body themes */
 
 .main-page--mantle {
-  background: url('../img/promo-slider/slider-1.png') var(--theme-mantle-color) top center no-repeat;
+  background: var(--theme-mantle-color) /* url('../img/promo-slider/slider-1.png') */ top center no-repeat;
 }
 
 .main-page--regent {
-  background: url('../img/promo-slider/slider-2.png') var(--theme-egent-gray-color) top center no-repeat;
+  background: var(--theme-egent-gray-color) url('../img/promo-slider/slider-2.png') top center no-repeat;
 }
 
 .main-page--pharlap {
-  background: url('../img/promo-slider/slider-3.png') var(--theme-pharlap-color) top center no-repeat;
-}
-
-/* Logo */
-
-.page-header__logo a {
-  border: none;
+  background: var(--theme-pharlap-color) url('../img/promo-slider/slider-3.png') top center no-repeat;
 }
 
 /* Header navigation */
@@ -272,15 +226,91 @@ a {
 
 /* User navigation */
 
+.user-nav__btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-white);
+  background-color: var(--btn-tiny-color);
+}
 
-.user-nav__cart--active {
+.user-nav__btn:hover,
+.user-nav__btn:active,
+.user-nav__btn:focus {
   background-color: var(--basic-white);
   color: var(--basic-dark);
 }
 
-.user-nav__cart--active path {
+.user-nav__btn:hover path,
+.user-nav__btn:active path,
+.user-nav__btn:focus path {
   fill: var(--basic-dark);
 }
+
+.user-nav__btn:disabled,
+.user-nav__btn:disabled path {
+  background-color: var(--btn-tiny-color);
+  color: var(--basic-white);
+  fill: var(--basic-white);
+  cursor: default;
+}
+
+.user-nav__btn--active:disabled .cart-red {
+  fill: none;
+}
+
+.user-nav__btn--active:not(:disabled),
+.user-nav__btn--active:not(:disabled) path {
+  background-color: var(--basic-white);
+  color: var(--basic-dark);
+  fill: var(--basic-dark);
+}
+
+.user-nav__btn--active:not(:disabled) .cart-red {
+  fill: var(--cart-active-color);
+}
+
+/* .user-nav__btn--cart {
+  background-color: var(--basic-white);
+  color: var(--basic-dark);
+}
+
+.user-nav__btn--cart path {
+  fill: var(--basic-dark);
+}
+
+.user-nav__btn--cart .user-nav__btn--cart-active,
+.user-nav__btn:hover .user-nav__btn--cart-active,
+.user-nav__btn:active .user-nav__btn--cart-active,
+.user-nav__btn:focus .user-nav__btn--cart-active {
+  fill: var(--cart-active-color);
+}
+
+.user-nav__btn--cart:disabled {
+  cursor: default;
+}
+
+.user-nav__btn--cart:disabled,
+.user-nav__btn--cart:disabled:hover,
+.user-nav__btn--cart:disabled:active,
+.user-nav__btn--cart:disabled:focus {
+  color: var(--basic-white);
+  background-color: var(--btn-tiny-color);
+}
+
+.user-nav__btn--cart:disabled path,
+.user-nav__btn--cart:disabled:hover path,
+.user-nav__btn--cart:disabled:active path,
+.user-nav__btn--cart:disabled:focus path {
+  fill: var(--basic-white);
+}
+
+.user-nav__btn--cart:disabled .user-nav__btn--cart-active,
+.user-nav__btn--cart:disabled:hover .user-nav__btn--cart-active,
+.user-nav__btn--cart:disabled:active .user-nav__btn--cart-active,
+.user-nav__btn--cart:disabled:focus .user-nav__btn--cart-active {
+  fill: none;
+} */
 
 /* Header information */
 
@@ -300,6 +330,11 @@ a {
   border: none;
 }
 
+.header__phone:hover,
+.header__phone:active {
+  color: var(--basic-link-hover);
+}
+
 /* Promo */
 
 .promo__sliders {
@@ -314,6 +349,26 @@ a {
   line-height: 60px;
 }
 
+.promo__btn {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 30px;
+  color:var(--basic-white);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-color);
+  background: var(--btn-color);
+}
+
+.promo__btn:hover {
+  background: var(--btn-hover-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
+}
+
+.promo__btn:active {
+  background: var(--btn-active-color);
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
+}
+
 /* Special offers */
 
 .special__list {
@@ -321,11 +376,11 @@ a {
 }
 
 .special__item--crimson {
-  background: url(../img/bg/crimson.jpg) crimson center center/cover no-repeat;
+  background: var(--section-bg-color) url(../img/bg/crimson.jpg) center center/cover no-repeat;
 }
 
 .special__item--chocolate {
-  background: url(../img/bg/сhocolate.jpg) crimson center center/cover no-repeat;
+  background: var(--section-bg-color) url(../img/bg/сhocolate.jpg) center center/cover no-repeat;
 }
 
 .special__title {
@@ -343,7 +398,23 @@ a {
 .special__btn {
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+  color:var(--basic-white);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-color);
+  background: var(--btn-color);
 }
+
+.special__btn:hover {
+  background: var(--btn-hover-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
+}
+
+.special__btn:active {
+  background: var(--btn-active-color);
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
+}
+
 
 /* Products */
 
@@ -354,7 +425,6 @@ a {
 .products__item:hover {
   background: var(--btn-tiny-color);
   box-shadow: 0px 20px 20px var(--popular-shadow-hover-color);
-  /* opacity: 0.2; Можно использовать прозрачность, но тогда нужен дополнительный див-подложка, по этому просто сделал прозрачный цвет фона и уменьшил прозрачность самой тени */
 }
 
 .products__btn {
@@ -393,12 +463,27 @@ a {
 .products__btn {
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+  color:var(--basic-white);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-color);
+  background: var(--btn-color);
+}
+
+.products__btn:hover {
+  background: var(--btn-hover-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
+}
+
+.products__btn:active {
+  background: var(--btn-active-color);
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
 }
 
 /* features */
 
 .features {
-  background: url('../img/bg/wafer-pattern.jpg') 0 0 repeat;
+  background: var(--pattern-bg-color) url('../img/bg/wafer-pattern.jpg') 0 0 repeat;
 }
 
 .features__lead {
@@ -422,7 +507,7 @@ a {
 /* Blog */
 
 .blog-notice {
-  background: url('../img/bg/strawberry.jpg') center center/cover no-repeat;
+  background: var(--basic-white) url('../img/bg/strawberry.jpg') center center/cover no-repeat;
 }
 
 .blog-notice__title {
@@ -459,11 +544,21 @@ a {
 .subscribe__btn {
   font-size: 18px;
   line-height: 24px;
-  text-shadow: 0px 2px 5px var(--subscribe-btn-shadow-color);
+  font-weight: 700;
+  color:var(--basic-white);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-color);
+  background: var(--btn-color);
 }
 
 .subscribe__btn:hover {
-  text-shadow: 0px 2px 5px var(--subscribe-btn-shadow-color);
+  background: var(--btn-hover-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
+}
+
+.subscribe__btn:active {
+  background: var(--btn-active-color);
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
 }
 
 /* Contacts */
@@ -495,6 +590,21 @@ a {
 .contacts__btn {
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+  color:var(--basic-white);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-color);
+  background: var(--btn-color);
+}
+
+.contacts__btn:hover {
+  background: var(--btn-hover-color);
+  box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
+}
+
+.contacts__btn:active {
+  background: var(--btn-active-color);
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active-color);
 }
 
 /* Social */
@@ -601,6 +711,10 @@ a {
   line-height: 16px;
 }
 
+.filter__wrapper {
+  background: var(--btn-tiny-color);
+}
+
 .filter__select {
   color: var(--basic-white);
   background: var(--btn-tiny-color);
@@ -612,7 +726,7 @@ a {
   color: var(--basic-dark);
 }
 
-.fat-content__list {
+.fat-content {
   list-style: none;
 }
 
@@ -622,11 +736,11 @@ a {
   line-height: 18px;
 }
 
-.fillers__list {
+.feel {
   list-style: none;
 }
 
-.fillers__item {
+.feel__item {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
