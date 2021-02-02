@@ -189,7 +189,7 @@ a {
 /* Body themes */
 
 .main-page--mantle {
-  background: var(--theme-mantle-color) /* url('../img/promo-slider/slider-1.png') */ top center no-repeat;
+  background: var(--theme-mantle-color) url('../img/promo-slider/slider-1.png') top center no-repeat;
 }
 
 .main-page--regent {
