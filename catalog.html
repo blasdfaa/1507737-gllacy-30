@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Глейси</title>
   </head>
-  <body class="catalog-page">
-    <div class="container">
+  <body class="page page--mantle">
       <header class="page-header">
         <div class="container">
           <div class="page-header__inner">
-              <a href="index.html" class="header-logo">
+              <a class="header-logo" href="index.html">
                 <svg class="header-logo__img" width="154" height="64" viewBox="0 0 154 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <title>Gllacy Shop</title>
                   <path d="M59.3411 43.1507C58.6031 43.0641 57.8564 43.196 57.1891 43.5308C57.1891 43.5308 54.1865 46.1093 39.3332 43.1404C28.4134 40.9523 22.7384 41.1783 22.7384 41.1783C22.7384 41.1783 24.57 28.3371 24.0695 24.7415C24.0466 24.4763 23.9242 24.2306 23.7281 24.0562C23.532 23.8818 23.2777 23.7923 23.0186 23.8067C21.9276 23.8067 21.267 24.2382 21.267 24.834C21.3606 27.2614 21.277 29.6926 21.0168 32.1072C20.5634 33.3829 19.7122 34.4692 18.5955 35.1974C17.4788 35.9256 16.1591 36.255 14.8413 36.1342C10.087 35.7952 9.08615 32.2819 8.66578 29.8883C8.2454 27.4947 8.00519 20.807 9.2563 18.0744C9.2563 18.0744 16.4227 18.3312 20.9267 14.3864C25.4308 10.4416 25.1505 7.03093 23.0186 5.57217C20.8867 4.11341 15.8922 4.37024 12.0588 7.96577C9.85781 9.93907 8.11968 12.3973 6.97426 15.1569C6.97426 15.1569 1.33923 13.9241 2.63038 7.88359C4.00161 1.57599 12.3991 2.31564 12.3991 2.31564C14.1507 2.66492 14.2307 2.82929 14.8113 2.23346C15.3918 1.63763 15.8122 0.0966821 13.0597 0.00422536C10.3072 -0.0882313 2.04986 1.30889 0.46845 6.93848C-1.22306 12.9276 1.89973 17.2114 6.09348 17.8792C6.09348 17.8792 3.80143 28.2549 6.63396 33.3914C7.41915 35.0146 8.65661 36.3617 10.1892 37.2616C11.7218 38.1615 13.4804 38.5736 15.2417 38.4457C16.8931 38.4457 19.8157 37.5005 20.6465 36.1342C20.6465 36.1342 20.2561 39.812 19.9258 41.1475C19.9258 41.1475 12.9796 41.055 10.8077 42.1748C7.11439 44.178 7.88508 48.8727 9.30635 50.5369C10.5074 51.9546 14.1207 52.7251 16.733 51.4615C18.2281 50.723 19.5196 49.6125 20.4898 48.2309C21.46 46.8494 22.0781 45.2407 22.288 43.5513C26.5142 43.3281 30.748 43.7998 34.8292 44.9485C41.0047 46.8387 49.6024 48.6056 52.1847 48.6056C54.767 48.6056 60.1918 47.8454 60.5221 45.6367C60.7023 44.178 60.1718 43.4178 59.3411 43.1507ZM15.8722 8.81843C15.8722 8.81843 19.1552 6.25019 20.7266 7.85277C21.0794 8.24335 21.2828 8.75163 21.2993 9.28397C21.3159 9.81632 21.1445 10.3369 20.8166 10.7497C20.156 11.6332 18.4145 14.4275 10.1471 15.8143C10.1471 15.8143 12.7494 11.1298 15.8722 8.81843ZM16.1425 48.7905C16.1425 48.7905 11.6084 51.328 11.138 47.8865C10.9562 47.1689 11.0201 46.409 11.3189 45.7339C11.6177 45.0588 12.1333 44.5096 12.7795 44.178C13.5702 43.7773 14.6511 43.274 19.3653 43.4486C19.3125 44.5462 18.9891 45.6121 18.4254 46.5464C17.8617 47.4807 17.0762 48.2528 16.1425 48.7905Z" fill="#FBFCFB"/>
@@ -30,32 +29,32 @@
             <nav>
               <ul class="menu">
                 <li class="menu__item menu__item--active">
-                  <a href="catalog.html" class="menu__link">Каталог</a>
+                  <a href="catalog.html" class="base-link menu__link">Каталог</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">Доставка и оплата</a>
+                  <a href="#" class="base-link menu__link">Доставка и оплата</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">О компании</a>
+                  <a href="#" class="base-link menu__link">О компании</a>
                 </li>
               </ul>
             </nav>
 
             <div class="user-nav">
-              <button class="user-nav__btn btn">
+              <button class="btn user-nav__btn user-nav__btn--search">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z" fill="white"/>
                   </svg>
                   <span class="visually-hidden">Поиск</span>
               </button>
-              <button class="user-nav__btn btn">
+              <button class="btn user-nav__btn user-nav__btn--login">
                 <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white"/>
                   <path d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" fill="white"/>
                   </svg>
                 Вход
               </button>
-              <button class="user-nav__btn user-nav__btn--active btn">
+              <button class="btn user-nav__btn user-nav__btn--active user-nav__btn--cart">
                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
                   <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white"/>
@@ -68,43 +67,47 @@
 
             <div class="page-header__info">
               <p class="page-header__days">с 10 до 20, ежедневно</p>
-              <p class="page-header__phone"><a class="base-link" href="tel:+78124502525">8 812 450-25-25</a></p>
+              <p class="page-header__phone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="index.html" class="base-link breadcrumbs__link">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="catalog.html" class="base-link breadcrumbs__link">Каталог</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="base-link breadcrumbs__link breadcrumbs__link-current">Сливочное</a>
-            </li>
-          </ul>
-        <h1 class="main-title">Сливочное мороженое</h1>
-        <section class="filter">
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form action="https://echo.htmlacademy.ru" method="GET" class="filter__form">
-            <fieldset class="filter__group">
-              <legend class="filter__label">Сортировка:</legend>
-                <select name="sorting" id="filter-sorting" class="custom-select">
-                  <option value="by-popularity">по популярности</option>
-                  <option value="inexpensive-first">сначала недорогие</option>
-                  <option value="expensive-first">сначала дорогие</option>
-                  <option value="by-fat-content">по жирности</option>
-                </select>
-            </fieldset>
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="index.html" class="base-link breadcrumbs__link">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="catalog.html" class="base-link breadcrumbs__link">Каталог</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="base-link breadcrumbs__link">Сливочное</a>
+              </li>
+            </ul>
+          </div>
+          <h1 class="main-title">Сливочное мороженое</h1>
+          <section class="filter">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <form action="https://echo.htmlacademy.ru" method="GET" class="filter__form">
+              <fieldset class="filter__group">
+                <legend class="filter__label">Сортировка:</legend>
+                  <select name="sorting" id="filter-sorting" class="custom-select">
+                    <option value="by-popularity">по популярности</option>
+                    <option value="inexpensive-first">сначала недорогие</option>
+                    <option value="expensive-first">сначала дорогие</option>
+                    <option value="by-fat-content">по жирности</option>
+                  </select>
+              </fieldset>
 
             <fieldset class="filter__group">
-              <legend class="filter__label">Цена: 100 ₽ – 500 ₽</legend>
-                <label class="filter__range">
-                  <input type="range" min="0" max="500" step="10" id="filter-price" class="custom-range">
-                </label>
+              <legend class="filter__label filter__label--price">Цена: 100 ₽ – 500 ₽</legend>
+              <div class="filter__price">
+                <input type="range" min="0" max="500" step="10" id="filter-price" class="custom-range">
+                <label class="filter__range"></label>
+              </div>
             </fieldset>
 
             <fieldset class="filter__group">
@@ -154,7 +157,7 @@
                   </li>
                 </ul>
             </fieldset>
-            <button class="filter__btn" type="submit">Применить</button>
+            <button class="btn filter__btn" type="submit">Применить</button>
           </form>
         </section>
 
@@ -164,92 +167,97 @@
             <li class="products__item">
               <img class="products__img" src="img/products/product1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
               <p class="products__price">310 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное с апельсиновым <br>
-                джемом и цитрусовой стружкой</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное с апельсиновым <br>
+                джемом и цитрусовой стружкой</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
               <p class="products__price">380 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочно-кофейное с кусочками <br>
-                  шоколада</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочно-кофейное с кусочками <br>
+                шоколада</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
               <p class="products__price">355 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочно-клубничное с <br>
-                 присыпкой из белого шоколада</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочно-клубничное с <br>
+                присыпкой из белого шоколада</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
               <p class="products__price">415 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное крем-брюле <br>
-                  с карамельной подливкой</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное крем-брюле <br>
+                с карамельной подливкой</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
               <p class="products__price">325 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное с брусничным <br>
-                 джемом</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное с брусничным <br>
+                джемом</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product6.jpg" alt="Сливочно-черничное с цельными ягодами черники " width="267" height="267">
               <p class="products__price">410 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочно-черничное с цельными <br>
-                 ягодами черники</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочно-черничное с цельными <br>
+                ягодами черники</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product7.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
               <p class="products__price">315 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочно-лимонное с <br>
-                 карамельной присыпкой</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочно-лимонное с <br>
+                карамельной присыпкой</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
               <p class="products__price">320 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное с шоколадной <br>
-                 стружкой</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное с шоколадной <br>
+                стружкой</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
               <p class="products__price">440 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочно-ванильное <br>
-                 с кусочками шоколада</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочно-ванильное <br>
+                с кусочками шоколада</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product10.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
               <p class="products__price">435 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочноe с ментоловым <br>
-                 сиропом</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочноe с ментоловым <br>
+                сиропом</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
               <p class="products__price">355 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное с кусочками черного <br>
-                 шоколада</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное с кусочками черного <br>
+                шоколада</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
             <li class="products__item">
               <img class="products__img" src="img/products/product12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
               <p class="products__price">420 ₽ <span>/кг</span></p>
-              <a class="base-link products__link" href="#">Сливочное с мятным сиропом</a>
+              <a class="products__link" href="#"><span class="base-link">Сливочное с мятным сиропом</span></a>
               <button class="btn products__btn">Быстрый просмотр</button>
             </li>
           </ul>
 
           <div class="pagination">
+            <button class="btn pagination__btn pagination__btn--prev" disabled>
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.158889 6.34088L6.06761 11.8509C6.1703 11.9461 6.30937 11.9996 6.45436 11.9996C6.59934 11.9996 6.73841 11.9461 6.84111 11.8509C6.89146 11.8044 6.93142 11.7491 6.95869 11.6882C6.98596 11.6272 7 11.5619 7 11.4959C7 11.4299 6.98596 11.3645 6.95869 11.3036C6.93142 11.2427 6.89146 11.1874 6.84111 11.1409L1.3084 6.00088L6.84111 0.830881C6.89146 0.7844 6.93142 0.729098 6.95869 0.668169C6.98596 0.60724 7 0.541887 7 0.475882C7 0.409876 6.98596 0.344522 6.95869 0.283593C6.93142 0.222664 6.89146 0.167362 6.84111 0.120881C6.73357 0.0360642 6.59506 -0.0069141 6.45436 0.000881243C6.38391 8.20699e-05 6.31406 0.0130149 6.2493 0.038848C6.18454 0.0646811 6.12631 0.102843 6.07835 0.150881L0.158889 5.63088C0.108542 5.67736 0.068581 5.73266 0.0413102 5.79359C0.0140395 5.85452 -5.31509e-07 5.91988 -5.25739e-07 5.98588C-5.19968e-07 6.05189 0.0140395 6.11724 0.0413103 6.17817C0.0685811 6.2391 0.108542 6.2944 0.158889 6.34088Z" fill="white"/>
+                </svg>
+            </button>
             <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--current">1</a>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link">1</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">2</a>
@@ -264,19 +272,16 @@
                 <a class="pagination__link" href="#">5</a>
               </li>
             </ul>
-            <button class="btn pagination__btn" disabled>
-              <svg width="7" height="12" viewBox="0 0 7 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.158889 6.34088L6.06761 11.8509C6.1703 11.9461 6.30937 11.9996 6.45436 11.9996C6.59934 11.9996 6.73841 11.9461 6.84111 11.8509C6.89146 11.8044 6.93142 11.7491 6.95869 11.6882C6.98596 11.6272 7 11.5619 7 11.4959C7 11.4299 6.98596 11.3645 6.95869 11.3036C6.93142 11.2427 6.89146 11.1874 6.84111 11.1409L1.3084 6.00088L6.84111 0.830881C6.89146 0.7844 6.93142 0.729098 6.95869 0.668169C6.98596 0.60724 7 0.541887 7 0.475882C7 0.409876 6.98596 0.344522 6.95869 0.283593C6.93142 0.222664 6.89146 0.167362 6.84111 0.120881C6.73357 0.0360642 6.59506 -0.0069141 6.45436 0.000881243C6.38391 8.20699e-05 6.31406 0.0130149 6.2493 0.038848C6.18454 0.0646811 6.12631 0.102843 6.07835 0.150881L0.158889 5.63088C0.108542 5.67736 0.068581 5.73266 0.0413102 5.79359C0.0140395 5.85452 -5.31509e-07 5.91988 -5.25739e-07 5.98588C-5.19968e-07 6.05189 0.0140395 6.11724 0.0413103 6.17817C0.0685811 6.2391 0.108542 6.2944 0.158889 6.34088Z" fill="white"/>
-                </svg>
-            </button>
-            <button class="btn pagination__btn">
+
+            <button class="btn pagination__btn pagination__btn--next">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" fill="white"/>
                 </svg>
             </button>
           </div>
         </section>
-
+        <hr class="catalog-divider">
+        </div>
       </main>
 
       <footer class="page-footer">
@@ -364,8 +369,7 @@
             </a>
             <p class="copyright__text">Сделано в <a class="copyright__link base-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
           </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
