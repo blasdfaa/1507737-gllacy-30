@@ -502,8 +502,8 @@ a {
 }
 
 .products__item {
+  width: 293px;
   padding: 6px 13px 21px 13px;
-  min-height: 405px;
   position: relative;
   text-align: center;
 }
@@ -515,7 +515,6 @@ a {
 
 .products__img {
   width: 267px;
-  height: 267px;
   border-radius: 100%;
 }
 
@@ -581,6 +580,9 @@ a {
   display: block;
 }
 
+.products__item:hover {
+}
+
 .products__btn:hover {
   background: var(--btn-hover-color);
   box-shadow: 0px 2px 2px var(--btn-shadow-hover-color);
@@ -595,7 +597,7 @@ a {
 
 .features__wrapper {
   padding: 24px 20px 32px 26px;
-  background: var(--pattern-bg-color) url('../img/bg/wafer-pattern.jpg') 0 0 repeat;
+  background: var(--pattern-bg-color) url('../img/bg/wafer-pattern.jpg') center center/cover repeat;
   border-radius: 16px;
 }
 
@@ -615,6 +617,14 @@ a {
   padding: 0;
   margin: 21px 0 0;
   list-style: none;
+}
+
+.features__item {
+  display: flex;
+}
+
+.features__img {
+  margin-right: 8px;
 }
 
 .features__descr {
@@ -798,7 +808,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1144px;
+  max-width: 1144px;
   margin-top: 18px;
 }
 
@@ -841,6 +851,20 @@ a {
   row-gap: 7px;
   padding: 0;
   list-style: none;
+}
+
+.helpful__item {
+  position: relative;
+}
+
+.helpful__item--heart::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 4px;
+  width: 15px;
+  height: 13px;
+  background: url(../img/icons/heart.svg);
 }
 
 .helpful__link {
@@ -962,8 +986,6 @@ a {
   padding-left: 17px;
 }
 
-
-
 .custom-select {
   padding: 6px 14px 6px 16px;
   vertical-align: middle;
@@ -976,7 +998,7 @@ a {
   background-color: var(--btn-tiny-color);
 }
 
-.filter__price{
+.filter__price {
   display: flex;
   padding: 8px 21px;
   background-color: var(--btn-tiny-color);
@@ -1006,11 +1028,11 @@ a {
 }
 
 .custom-checkbox {
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .filter__btn {
-  padding: 5px 29px;
+  padding: 5px 20px;
   margin: 9px 0 0;
   font-weight: 500;
   font-size: 16px;
