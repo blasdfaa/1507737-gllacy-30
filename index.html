@@ -61,15 +61,15 @@
                 <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
                 <path class="cart-red" d="M5.93506 4.02997L6.97297 13H17.5032L18.6923 4.02997H5.93506Z" fill="none"/>
                 </svg>
-              <span>Пусто</span>
+              Пусто
             </button>
           </div>
-
           <div class="page-header__info">
             <p class="page-header__days">с 10 до 20, ежедневно</p>
             <p class="page-header__phone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
           </div>
         </div>
+
       </div>
     </header>
 
@@ -244,10 +244,10 @@
           <section class="subscribe">
             <h2 class="visually-hidden">Рассылка</h2>
             <div class="subscribe__inner">
-              <form action="#" method="POST">
-                <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе <br>
-                   всего самого вкусного, что у нас происходит. Обещаем не спамить <br>
-                    и не слать всякой ненужной ерунды. Честно =)</p>
+              <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе <br>
+                всего самого вкусного, что у нас происходит. Обещаем не спамить <br>
+                 и не слать всякой ненужной ерунды. Честно =)</p>
+              <form action="#" method="POST" class="subscribe__form">
                 <label>
                   <input class="field" type="email" name="subscribe" id="email" placeholder="email@example.com">
                 </label>
@@ -261,14 +261,14 @@
         <h2 class="visually-hidden">Контактная информация</h2>
         <img class="contacts__map" src="img/map.jpg" alt="map" width="1200" height="430">
           <div class="contacts__sidebar">
-            <p class="contacts__text">Адрес главного офиса <br>
+            <p class="contacts__addres">Адрес главного офиса <br>
               и офлайн-магазина: <br>
               <span>ул. Большая Конюшенная, <br>
               19/8, Санкт-Петербург</span>
             </p>
-            <p class="contacts__text">
+            <p class="contacts__phone">
               Для заказов по телефону: <br>
-              <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a><br>
+              <a class="contacts__link" href="tel:+78124502525">8 812 450-25-25</a><br>
               (с 10 до 20 ежедневно)
             </p>
             <button class="btn contacts__btn" type="submit">Форма обратной связи</button>
@@ -278,7 +278,7 @@
     </main>
 
     <footer class="page-footer">
-        <div class="container">
+        <div class="container page-footer__container">
           <section class="social">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social__list">
@@ -327,7 +327,7 @@
           <section class="helpful">
             <h2 class="visually-hidden">Полезные ссылки</h2>
             <ul class="helpful__list">
-              <li class="helpful__item">
+              <li class="helpful__item helpful__item--heart">
                 <a class="helpful__link base-link" href="#"><b>Для поставщиков</b></a>
               </li>
               <li class="helpful__item">
