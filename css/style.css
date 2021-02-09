@@ -803,7 +803,7 @@ a {
   border-radius: 16px;
 }
 
-.contacts__addres {
+.contacts__address {
   margin: 0;
   margin-bottom: 30px;
   font-weight: 400;
@@ -812,7 +812,7 @@ a {
   color: var(--basic-dark);
 }
 
-.contacts__addres span {
+.contacts__address span {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
