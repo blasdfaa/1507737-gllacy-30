@@ -181,6 +181,7 @@ a {
 
 .field {
   font: inherit;
+  width: 100%;
   padding: 14px;
   font-weight: 700;
   font-size: 16px;
@@ -206,15 +207,15 @@ a {
 /* Body themes */
 
 .page--mantle {
-  background: var(--theme-mantle-color);
+  background: var(--theme-mantle-color) url(../img/promo-slider/highlight_s_1.png) center top no-repeat;
 }
 
 .page--regent {
-  background: var(--theme-egent-gray-color);
+  background: var(--theme-egent-gray-color) url(../img/promo-slider/highlight_s_2.png) center top no-repeat;
 }
 
 .page--pharlap {
-  background: var(--theme-pharlap-color);
+  background: var(--theme-pharlap-color) url(../img/promo-slider/highlight_s_3.png) center top no-repeat;
 }
 
 /* Header */
@@ -291,6 +292,7 @@ a {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   display: flex;
+  align-items: center;
 }
 
 .user-nav__btn {
@@ -392,10 +394,6 @@ a {
 
 .promo {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-top: 295px;
-  margin-bottom: 40px;
 }
 
 .promo__sliders {
@@ -405,18 +403,19 @@ a {
 }
 
 .promo__slider {
+  position: relative;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  height: 582px;
 }
 
 .promo__img {
   position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
+  top: 0;
+  max-width: 100%;
 }
 
 .promo__title {
@@ -426,6 +425,7 @@ a {
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
+  z-index: 1;
 }
 
 .promo__btn {
@@ -440,6 +440,7 @@ a {
   text-shadow: 0px 2px 5px var(--btn-text-shadow-color);
   box-shadow: 0px 2px 2px var(--btn-shadow-color);
   background: var(--btn-color);
+  z-index: 1;
 }
 
 .promo__btn:hover {
@@ -454,7 +455,7 @@ a {
 
 .promo__controls {
   position: absolute;
-  top: 462px;
+  top: 479px;
   left: 0;
 }
 
@@ -676,6 +677,7 @@ a {
 
 .features__img {
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .features__descr {
@@ -777,8 +779,9 @@ a {
   justify-content: space-between;
 }
 
-.subscribe .field {
-  width: 368px;
+.subscribe__field {
+  width: 100%;
+  margin-right: 10px;
 }
 
 /* Contacts */
