@@ -206,6 +206,10 @@ a {
 
 /* Body themes */
 
+.page {
+  background: var(--theme-mantle-color);
+}
+
 .page--mantle {
   background: var(--theme-mantle-color) url(../img/promo-slider/highlight_s_1.png) center top no-repeat;
 }
@@ -400,6 +404,8 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
+  height: 582px;
+  overflow: hidden;
 }
 
 .promo__slider {
