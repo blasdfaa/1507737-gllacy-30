@@ -844,7 +844,7 @@ a {
 /* Products */
 
 .products {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .products__list {
@@ -856,14 +856,19 @@ a {
 }
 
 .products__item {
-  padding: 6px 13px 21px 13px;
   position: relative;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
-.products__item:hover {
+.products__wrapper {
+  padding: 6px 13px 21px 13px;
+}
+
+.products__item:hover .products__wrapper {
+  position: absolute;
   background: var(--btn-tiny-color);
   box-shadow: 0px 20px 20px var(--popular-shadow-hover-color);
+  z-index: 2;
 }
 
 .products__img {
