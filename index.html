@@ -29,13 +29,32 @@
           <nav>
             <ul class="menu">
               <li class="menu__item">
-                <a href="catalog.html" class="base-link menu__link">Каталог</a>
+                <a href="catalog.html" class="menu__link"><span class="base-link">Каталог</span></a>
+                <div class="dropdown">
+                  <ul class="dropdown__list">
+                    <li class="dropdown__title">
+                      Новинки
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="catalog.html" class="dropdown__link">Сливочное</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#" class="dropdown__link">Щербеты</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#" class="dropdown__link">Фруктовый лед</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#" class="dropdown__link">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="menu__item">
-                <a href="#" class="base-link menu__link">Доставка и оплата</a>
+                <a href="#" class="menu__link"><span class="base-link">Доставка и оплата</span></a>
               </li>
               <li class="menu__item">
-                <a href="#" class="base-link menu__link">О компании</a>
+                <a href="#" class="menu__link"><span class="base-link">О компании</span></a>
               </li>
             </ul>
           </nav>
@@ -47,6 +66,13 @@
                 </svg>
                 <span class="visually-hidden">Поиск</span>
             </button>
+            <div class="popup-search">
+              <form action="#" method="GET">
+                <input class="field popup-search__field" type="search" id="search" placeholder="Крем-брюле">
+                <label for="search"></label>
+              </form>
+            </div>
+
             <button class="btn user-nav__btn user-nav__btn--login">
               <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white"/>
@@ -54,6 +80,54 @@
                 </svg>
               Вход
             </button>
+            <div class="popup-login">
+              <form action="#" method="GET" class="popup-login__form">
+                <input type="email" class="field popup-login__field" id="login" placeholder="email@example.com">
+                <label for="login"></label>
+
+                <input type="password" class="field popup-login__field" id="password" placeholder="••••••">
+                <label for="password"></label>
+
+                <button class="btn popup-login__btn" type="submit">Войти</button>
+                <div class="popup-login__links">
+                  <a class=" popup-login__link" href="#"><span class="base-link">Забыли пароль?</span></a>
+                  <a class="popup-login__link" href="#"><span class="base-link">Новая регистрация</span></a>
+                </div>
+              </form>
+            </div>
+
+            <div class="popup-cart">
+              <form action="#" class="popup-cart__form">
+                <ul class="popup-cart__list">
+                  <li class="popup-cart__item">
+                    <div class="popup-cart__cross">
+                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="#2C2829"/>
+                      </svg>
+                    </div>
+                    <img src="img/products/product1.jpg" alt="Фото товара" class="popup-cart__preview" width="33" height="33">
+                    <a class="popup-cart__link" href="#">Пломбир с апельсиновым джемом</a>
+                    <p class="popup-cart__weight">1,5 кг х <span class="popup-cart__weight--price">200 руб.</span></p>
+                    <p class="popup-cart__price">300 руб.</p>
+                  </li>
+                  <li class="popup-cart__item">
+                    <div class="popup-cart__cross">
+                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="#2C2829"/>
+                      </svg>
+                    </div>
+                    <img src="img/products/product3.jpg" alt="Фото товара" class="popup-cart__preview" width="33" height="33">
+                    <a class="popup-cart__link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                    <p class="popup-cart__weight">1,5 кг х <span class="popup-cart__weight--price">300 руб.</span></p>
+                    <p class="popup-cart__price">450 руб.</p>
+                  </li>
+                </ul>
+                <div class="popup-cart__checkout">
+                  <p class="popup-cart__total">Итого: <span class="popup-cart__total--cost">750 руб.</span></p>
+                  <button class="btn popup-cart__btn" type="submit">Оформить заказ</button>
+                </div>
+              </form>
+            </div>
             <button class=" btn user-nav__btn user-nav__btn--active user-nav__btn--cart" disabled>
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
@@ -63,6 +137,7 @@
                 </svg>
               Пусто
             </button>
+
           </div>
           <div class="page-header__info">
             <p class="page-header__days">с 10 до 20, ежедневно</p>

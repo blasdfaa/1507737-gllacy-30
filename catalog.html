@@ -26,19 +26,38 @@
                   <path d="M153.265 49.1398C152.144 46.1812 149.682 45.0306 146.969 44.9074C146.667 44.1563 146.287 43.4401 145.838 42.7706C141.925 36.8225 132.637 37.6341 126.341 40.716C126.341 39.7812 126.251 38.8463 126.211 37.9115C127.463 38.0153 128.721 37.7863 129.862 37.2465C131.003 36.7067 131.99 35.8743 132.727 34.8296C134.398 32.3743 134.158 28.0186 133.497 25.2654C132.877 22.6767 130.415 23.1389 128.563 24.0019C127.882 24.333 127.254 24.7696 126.701 25.2963C126.701 24.608 126.811 23.9094 126.861 23.2417C126.972 21.6596 124.019 22.0603 123.919 23.4574C123.458 29.8164 123.619 36.1548 123.478 42.5035C121.702 44.0013 120.291 45.9041 119.358 48.0604C118.425 50.2166 117.996 52.5667 118.104 54.9235C118.104 57.2555 120.035 59.0327 122.107 57.3685C125 55.0879 125.881 50.5575 126.281 47.0955C126.445 45.5504 126.498 43.995 126.441 42.4419C128.698 40.9228 131.334 40.105 134.033 40.0868C136.732 40.0685 139.378 40.8507 141.655 42.3391C142.632 43.0474 143.415 44.0028 143.927 45.1128C142.326 45.4066 140.771 45.9179 139.303 46.6332C137.591 47.4756 135.049 49.4686 135.169 51.6978C135.149 52.4032 135.366 53.0941 135.784 53.655C136.201 54.216 136.793 54.613 137.461 54.7797C137.552 54.8272 137.65 54.8584 137.751 54.8721C143.897 55.8994 148.471 52.1703 147.59 46.9209C150.593 48.5954 151.704 52.4785 150.643 55.8173C148.251 63.3165 139.042 64.991 133.678 59.9778C133.097 59.4436 130.485 60.5736 130.945 61.0051C138.692 68.2681 157.989 61.5496 153.265 49.1398ZM123.298 47.3215C123.213 49.1354 122.827 50.9211 122.157 52.6018C121.907 53.1668 121.637 53.7113 121.346 54.2455C121.346 54.2455 121.086 54.3071 121.036 53.5058C121.032 50.6277 121.846 47.8109 123.378 45.4005C123.358 46.0374 123.338 46.6846 123.298 47.3215ZM126.431 28.974C126.489 28.9234 126.539 28.8646 126.581 28.7994C127.119 27.8692 127.757 27.0042 128.483 26.2208C129.007 25.6096 129.617 25.0831 130.294 24.6593C130.615 24.8237 130.945 25.6866 131.065 26.8475C131.375 29.7034 131.506 37.2232 127.122 36.5143C126.78 36.4987 126.438 36.5583 126.121 36.689C126.111 34.0797 126.251 31.532 126.431 28.974ZM139.523 53.362H139.463C137.781 52.9511 137.961 51.3074 138.182 50.1979C138.672 47.5989 141.755 46.2018 144.297 46.0888C145.588 49.787 144.597 54.2147 139.523 53.362Z" fill="#FBFCFB"/>
                   </svg>
               </a>
-            <nav>
-              <ul class="menu">
-                <li class="menu__item menu__item--active">
-                  <a href="catalog.html" class="base-link menu__link">Каталог</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="base-link menu__link">Доставка и оплата</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="base-link menu__link">О компании</a>
-                </li>
-              </ul>
-            </nav>
+              <nav>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="catalog.html" class="menu__link menu__link--active"><span class="base-link">Каталог</span></a>
+                    <div class="dropdown">
+                      <ul class="dropdown__list">
+                        <li class="dropdown__title">
+                          Новинки
+                        </li>
+                        <li class="dropdown__item">
+                          <a href="catalog.html" class="dropdown__link">Сливочное</a>
+                        </li>
+                        <li class="dropdown__item">
+                          <a href="" class="dropdown__link">Щербеты</a>
+                        </li>
+                        <li class="dropdown__item">
+                          <a href="" class="dropdown__link">Фруктовый лед</a>
+                        </li>
+                        <li class="dropdown__item">
+                          <a href="" class="dropdown__link">Мелорин</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link"><span class="base-link">Доставка и оплата</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link"><span class="base-link">О компании</span></a>
+                  </li>
+                </ul>
+              </nav>
 
             <div class="user-nav">
               <button class="btn user-nav__btn user-nav__btn--search">
@@ -114,19 +133,19 @@
               <legend class="filter__label">Жирность:</legend>
                 <ul class="filter-list">
                   <li class="filter-list__item">
-                    <input type="radio" name="fat-content" value="0" id="filter-0" class="custom-radio">
+                    <input type="radio" name="fat-content" value="0" id="filter-0" class="custom-radio visually-hidden">
                     <label for="filter-0">0%</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="radio" name="fat-content" value="to-10" id="filter-to-10" class="custom-radio">
+                    <input type="radio" name="fat-content" value="to-10" id="filter-to-10" class="custom-radio visually-hidden">
                     <label for="filter-to-10">до 10%</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="radio" name="fat-content" value="to-30" id="filter-to-30" class="custom-radio">
+                    <input type="radio" name="fat-content" value="to-30" id="filter-to-30" class="custom-radio visually-hidden">
                     <label for="filter-to-30">до 30%</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="radio" name="fat-content" value="from-30" id="filter-from-30" class="custom-radio">
+                    <input type="radio" name="fat-content" value="from-30" id="filter-from-30" class="custom-radio visually-hidden">
                     <label for="filter-from-30">выше 30%</label>
                   </li>
                 </ul>
@@ -136,23 +155,23 @@
               <legend class="filter__label">Наполнители:</legend>
                 <ul class="filter-list">
                   <li class="filter-list__item">
-                    <input type="checkbox" name="chocolate" id="filter-chocolate" class="custom-checkbox" checked>
+                    <input type="checkbox" name="chocolate" id="filter-chocolate" class="custom-checkbox visually-hidden">
                     <label for="filter-chocolate">шоколадные</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="checkbox" name="powder-sugar" id="filter-powder-sugar" class="custom-checkbox" checked>
+                    <input type="checkbox" name="powder-sugar" id="filter-powder-sugar" class="custom-checkbox visually-hidden" checked>
                     <label for="filter-powder-sugar">сахарные присыпки</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="checkbox" name="fruits" id="filter-fruits" class="custom-checkbox">
+                    <input type="checkbox" name="fruits" id="filter-fruits" class="custom-checkbox visually-hidden">
                     <label for="filter-fruits">фрукты</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="checkbox" name="syrups" id="filter-syrups" class="custom-checkbox">
+                    <input type="checkbox" name="syrups" id="filter-syrups" class="custom-checkbox visually-hidden">
                     <label for="filter-syrups">сиропы</label>
                   </li>
                   <li class="filter-list__item">
-                    <input type="checkbox" name="jams" id="filter-jams" class="custom-checkbox">
+                    <input type="checkbox" name="jams" id="filter-jams" class="custom-checkbox visually-hidden">
                     <label for="filter-jams">джемы</label>
                   </li>
                 </ul>
