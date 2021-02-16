@@ -197,7 +197,7 @@ a {
 .field {
   font: inherit;
   width: 100%;
-  padding: 14px;
+  padding: 13px;
   font-weight: 700;
   font-size: 16px;
   color: var(--basic-dark);
@@ -212,12 +212,12 @@ a {
 
 .field:hover {
   border: 2px solid var(--input-border-color);
-  padding: 13px;
+  padding: 12px;
 }
 
 .field:focus {
   border: 2px solid var(--input-focus-border-color);
-  padding: 13px;
+  padding: 12px;
 }
 
 /* Modal */
@@ -342,8 +342,9 @@ a {
 .dropdown {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -5px;
+  top: 38px;
+  left: -8px;
+  padding-bottom: 6px;
   width: 143px;
   background: var(--basic-white);
   box-shadow: 0px 20px 20px var(--modal-shadow-color);
@@ -355,15 +356,13 @@ a {
 .dropdown__list {
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  font-weight: 400;
   color: var(--basic-dark);
   list-style: none;
 }
 
 .dropdown__title {
   position: relative;
-  padding: 13px 20px 13px 20px;
+  padding: 10px 19px 15px 21px;
   font-weight: 700;
   font-size: 14px;
   cursor: default;
@@ -372,7 +371,7 @@ a {
 .dropdown__title::after {
   position: absolute;
   content: '';
-  top: 41px;
+  top: 37px;
   left: 50%;
   transform: translateX(-50%);
   width: 128px;
@@ -382,8 +381,12 @@ a {
 }
 
 .dropdown__link {
-  display: block;
-  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 31px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .dropdown__item:hover {
@@ -488,14 +491,14 @@ a {
 .popup-search {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 36px;
   right: 211px;
   padding: 20px 15px;
-  width: 341px;
+  width: 342px;
   background-color: var(--section-bg-color);
   box-shadow: 0px 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
-  z-index: 1;
+  z-index: 2;
   transition: all .1s;
 }
 
@@ -509,14 +512,14 @@ a {
 .popup-login {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 36px;
   right: 110px;
-  padding: 20px 18px;
+  padding: 22px 18px;
   width: 277px;
   background-color: var(--section-bg-color);
   box-shadow: 0px 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
-  z-index: 1;
+  z-index: 2;
   transition: all .1s;
 }
 
@@ -528,7 +531,9 @@ a {
 
 .popup-login__field {
   grid-column: 1 / 3;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  font-weight: 400;
+  font-size: 14px;
   border-radius: 4px;
 }
 
@@ -581,16 +586,16 @@ a {
 }
 
 .popup-cart {
-  display: none;
+  display: block;
   position: absolute;
-  top: 40px;
+  top: 36px;
   right: 0;
-  padding: 20px 15px;
+  padding: 20px 14px 21px 20px;
   width: 539px;
   background-color: var(--section-bg-color);
   box-shadow: 0px 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
-  z-index: 1;
+  z-index: 2;
   transition: all .1s;
 }
 
@@ -602,14 +607,18 @@ a {
 
 .popup-cart__item {
   display: grid;
-  grid-template-columns: min-content max-content 250px repeat(2, max-content);
-  align-items: center;
+  grid-template-columns: min-content max-content 246px repeat(2, max-content);
   margin-bottom: 20px;
+}
+
+.popup-cart__item:last-child {
+  margin-bottom: 15px;
 }
 
 .popup-cart__cross {
   grid-column: 1 / 2;
-  margin-right: 9px;
+  padding-top: 7px;
+  margin-right: 10px;
 }
 
 .popup-cart__cross svg {
@@ -622,7 +631,7 @@ a {
 
 .popup-cart__preview {
   grid-column: 2 / 3;
-  margin-right: 13px;
+  margin-right: 14px;
   width: 100%;
   max-width: 33px;
   border-radius: 100%;
@@ -630,6 +639,7 @@ a {
 
 .popup-cart__link {
   grid-column: 3 / 4;
+  padding-top: 9px;
   margin-right: 30px;
   font-weight: 400;
   font-size: 13px;
@@ -646,6 +656,7 @@ a {
   grid-column: 4 / 5;
   margin: 0;
   margin-right: 26px;
+  padding-top: 10px;
   font-weight: 400;
   font-size: 13px;
   color: var(--basic-dark);
@@ -658,6 +669,7 @@ a {
 .popup-cart__price {
   grid-column: 5 / 6;
   margin: 0;
+  padding-top: 10px;
   font-weight: 400;
   font-size: 13px;
   color: var(--basic-dark);
@@ -674,7 +686,7 @@ a {
 
 .popup-cart__total {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-weight: 700;
   font-size: 15px;
   color: var(--basic-dark);
