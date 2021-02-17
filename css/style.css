@@ -222,17 +222,6 @@ a {
 
 /* Modal */
 
-.overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--overlay-color);
-  z-index: 1;
-}
-
 .modal {
   position: absolute;
   top: 338px;
@@ -1242,8 +1231,19 @@ a {
 
 /* Modal feedback */
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  z-index: 1;
+}
+
 .modal-feedback {
-  display: block;
+  display: none;
   max-width: 477px;
 }
 
