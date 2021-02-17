@@ -223,7 +223,7 @@ a {
 /* Modal */
 
 .overlay {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -235,10 +235,11 @@ a {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 338px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   background-color: var(--section-bg-color);
+  border-radius: 6px;
 }
 
 /* Body themes */
@@ -586,7 +587,7 @@ a {
 }
 
 .popup-cart {
-  display: block;
+  display: none;
   position: absolute;
   top: 36px;
   right: 0;
@@ -1242,18 +1243,18 @@ a {
 /* Modal feedback */
 
 .modal-feedback {
-  display: none;
+  display: block;
   max-width: 477px;
 }
 
 .modal-feedback__wrapper {
   position: relative;
-  padding: 20px 27px 25px;
+  padding: 15px 26px 27px 24px;
 }
 
 .modal-feedback__title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 21px;
   font-weight: 500;
   font-size: 24px;
   color: var(--basic-dark);
@@ -1278,13 +1279,14 @@ a {
 
 .modal-feedback__field {
   width: 267px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   border-radius: 4px
 }
 
 .modal-feedback__field--message {
   resize: none;
   width: 428px;
+  margin-bottom: 27px;
 }
 
 .modal-feedback__btn {

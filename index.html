@@ -348,32 +348,6 @@
             </p>
             <button class="btn contacts__btn" type="submit">Форма обратной связи</button>
           </div>
-
-          <div class="overlay">
-            <div class="modal modal-feedback">
-             <div class="modal-feedback__wrapper">
-              <h3 class="modal-feedback__title">Мы обязательно вам ответим!</h3>
-              <div class="modal-feedback__close">
-                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#231F20"/>
-                  </svg>
-              </div>
-              <form action="#" class="modal-feedback__form" method="GET">
-                  <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name" placeholder="Имя Фамилия" required>
-                  <label class="visually-hidden" for="input-feedback-name" class="visually-hidden">Имя Фамилия</label>
-
-                  <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="feedback-email" placeholder="email@example.com" required>
-                  <label class="visually-hidden" for="input-feedback-email" class="visually-hidden">Email</label>
-
-                  <textarea class="field modal-feedback__field modal-feedback__field--message" name="feedback-message" id="input-feedback-message" rows="10" resize="none" placeholder="В свободной форме" required></textarea>
-                  <label class="visually-hidden" for="input-feedback-message">Текст сообщения</label>
-
-                  <button class="btn modal-feedback__btn" type="submit">Отправить</button>
-              </form>
-             </div>
-
-            </div>
-          </div>
         </section>
       </div>
     </main>
@@ -465,5 +439,31 @@
           </div>
         </div>
     </footer>
+
+    <div class="overlay">
+      <div class="modal modal-feedback">
+       <div class="modal-feedback__wrapper">
+        <h3 class="modal-feedback__title">Мы обязательно вам ответим!</h3>
+        <div class="modal-feedback__close">
+          <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#231F20"/>
+            </svg>
+        </div>
+        <form action="#" class="modal-feedback__form" method="GET">
+            <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name" placeholder="Имя Фамилия" required>
+            <label class="visually-hidden" for="input-feedback-name" class="visually-hidden">Имя Фамилия</label>
+
+            <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="feedback-email" placeholder="email@example.com" required>
+            <label class="visually-hidden" for="input-feedback-email" class="visually-hidden">Email</label>
+
+            <textarea class="field modal-feedback__field modal-feedback__field--message" name="feedback-message" id="input-feedback-message" rows="7" resize="none" placeholder="В свободной форме" required></textarea>
+            <label class="visually-hidden" for="input-feedback-message">Текст сообщения</label>
+
+            <button class="btn modal-feedback__btn" type="submit">Отправить</button>
+        </form>
+       </div>
+
+      </div>
+    </div>
   </body>
 </html>
