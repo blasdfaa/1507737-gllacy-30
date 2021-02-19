@@ -838,6 +838,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 26px;
+  row-gap: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -921,6 +922,7 @@ a {
 .products__item {
   position: relative;
   margin-bottom: 10px;
+  min-height: 350px;
 }
 
 .products__wrapper {
