@@ -330,8 +330,9 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/-/CCUQAHxLsA&amp;scroll=true" width="1200" height="430" frameborder="0" allowfullscreen="true"></iframe>
+        <div class="contacts__map" id="map">
+
+<!--          <iframe src="https://yandex.ru/map-widget/v1/-/CCUQAHxLsA&amp;scroll=true" width="1200" height="430" frameborder="0" allowfullscreen="true"></iframe>-->
         </div>
           <div class="contacts__sidebar">
             <p class="contacts__address">Адрес главного офиса <br>
@@ -462,5 +463,9 @@
 
       </div>
     </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ac944049-b33d-457b-a679-ca6b307f9897>" type="text/javascript"></script>
+<!--    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd74dad68888474da3d50ab0a05992f936ea015b4e82a044580240e59888c23a&amp;;width=1200&amp;height=430&amp;lang=ru_RU&amp;scroll=true&amp;id=map&amp;apikey=<ac944049-b33d-457b-a679-ca6b307f9897>"></script>-->
+    <script src="js/script.js"></script>
   </body>
 </html>
