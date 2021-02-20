@@ -12,7 +12,7 @@ function init() {
     behaviors: ['drag']
   });
 
-  let placemark = new ymaps.Placemark([59.938635, 30.323118], {
+  const placemark = new ymaps.Placemark([59.938635, 30.323118], {
     hintContent: '<div class="contacts__hint">ул. Большая Конюшенная, 19/8</div>',
     },
     {
