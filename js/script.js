@@ -1,5 +1,4 @@
 
-
 // Contacts map
 
 ymaps.ready(init);
