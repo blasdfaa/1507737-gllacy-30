@@ -131,7 +131,7 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   padding: 0 27px;
   margin: 0 auto;
 }
@@ -370,8 +370,11 @@ a {
 }
 
 .dropdown__link--current:hover,
-.dropdown__link--current:active {
-  color: var(--basic-dark);
+.dropdown__link--current:active,
+.dropdown__link--current:focus {
+  color: var(--basic-white);
+  background-color: var(--dropdown-current-color);
+  cursor: default;
 }
 
 .dropdown__link--head {
@@ -1274,10 +1277,6 @@ a {
 .contacts__btn:active {
   background: var(--btn-active-color);
   box-shadow: inset 0 2px 2px var(--btn-shadow-active-color);
-}
-
-.contacts__hint {
-  box-shadow: 0 0 0 20px black;
 }
 
 /*Map*/

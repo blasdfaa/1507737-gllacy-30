@@ -29,7 +29,7 @@
           <nav>
             <ul class="menu">
               <li class="menu__item">
-                <a href="catalog.html" class="menu__link"><span class="base-link">Каталог</span></a>
+                <a href="catalog.html" class="menu__link" aria-label="Перейти на страницу каталога"><span class="base-link">Каталог</span></a>
                   <ul class="dropdown">
                     <li class="dropdown__item">
                       <a href="#" class="dropdown__link dropdown__link--head">Новинки</a>
@@ -80,22 +80,22 @@
             </button>
             <div class="popup-login">
               <form action="#" method="post" class="popup-login__form">
-                  <input type="email" class="field popup-login__field" id="input-login" name="login" placeholder="email@example.com" required>
+                  <input type="email" class="field popup-login__field" id="input-login" name="login" placeholder="email@example.com" aria-invalid="true" required>
                   <label for="input-login" class="visually-hidden">Email</label>
 
-                  <input type="password" class="field popup-login__field" id="input-password" name="password" placeholder="••••••" required>
+                  <input type="password" class="field popup-login__field" id="input-password" name="password" placeholder="••••••" aria-invalid="true" required>
                   <label for="input-password" class="visually-hidden">Пароль</label>
 
                 <button class="btn popup-login__btn" type="submit" aria-label="Войти на сайт">Войти</button>
                 <div class="popup-login__links">
-                  <a class=" popup-login__link" href="#"><span class="base-link">Забыли пароль?</span></a>
-                  <a class="popup-login__link" href="#"><span class="base-link">Новая регистрация</span></a>
+                  <a class=" popup-login__link" href="#" aria-label="Перейти на страницу восстановления пароля"><span class="base-link">Забыли пароль?</span></a>
+                  <a class="popup-login__link" href="#" aria-label="Перейти на страницу регистрации"><span class="base-link">Новая регистрация</span></a>
                 </div>
               </form>
             </div>
 
             <div class="popup-cart">
-              <form action="#" class="popup-cart__form">
+              <form method="post" action="#" class="popup-cart__form">
                 <ul class="popup-cart__list">
                   <li class="popup-cart__item">
                     <button  class="popup-cart__cross" aria-label="Удалить Пломбир с апельсиновым джемом из корзины">
@@ -106,7 +106,7 @@
                     <img src="img/products/product1.jpg" alt="" class="popup-cart__preview" width="33" height="33">
                     <a class="popup-cart__link" href="#">Пломбир с апельсиновым джемом</a>
                     <p class="popup-cart__weight">1,5 кг х <span class="popup-cart__weight--price">200 руб.</span></p>
-                    <p class="popup-cart__price" aria-label="Текущая стоимость">300 руб.</p>
+                    <p class="popup-cart__price">300 руб.</p>
                   </li>
                   <li class="popup-cart__item">
                     <button class="popup-cart__cross" aria-label="Удалить Клубничный пломбир с присыпкой из белого шоколада из корзины">
@@ -117,11 +117,11 @@
                     <img src="img/products/product3.jpg" alt="" class="popup-cart__preview" width="33" height="33">
                     <a class="popup-cart__link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
                     <p class="popup-cart__weight">1,5 кг х <span class="popup-cart__weight--price">300 руб.</span></p>
-                    <p class="popup-cart__price" aria-label="Текущая стоимость">450 руб.</p>
+                    <p class="popup-cart__price">450 руб.</p>
                   </li>
                 </ul>
                 <div class="popup-cart__checkout">
-                  <p class="popup-cart__total" aria-label="Итоговая цена">Итого: 750 руб.</p>
+                  <p class="popup-cart__total">Итого: 750 руб.</p>
                   <button class="btn popup-cart__btn" type="submit">Оформить заказ</button>
                 </div>
               </form>
@@ -137,9 +137,9 @@
             </button>
 
           </div>
-          <div class="page-header__info" aria-label="Телефон и время работы магазина">
-            <p class="page-header__days" aria-label="Расписание">с 10 до 20, ежедневно</p>
-            <a class="base-link page-header__phone" href="tel:+78124502525" aria-label="Телефон">8 812 450-25-25</a>
+          <div class="page-header__info">
+            <p class="page-header__days">с 10 до 20, ежедневно</p>
+            <a class="base-link page-header__phone" href="tel:+78124502525" aria-label="Сделать звонок">8 812 450-25-25</a>
           </div>
         </div>
       </div>
@@ -183,13 +183,13 @@
               <h3 class="special__title">Малинка даром!</h3>
               <p class="special__text">При покупке 2 кг любого фруктового мороженого, добавим <br>
                 в ваш заказ банку малинового варенья бесплатно.</p>
-              <a href="catalog.html" class="btn special__btn">Хочу варенье!</a>
+              <a href="catalog.html" class="btn special__btn" aria-label="Перейти в каталог">Хочу варенье!</a>
             </li>
             <li class="special__item special__item--chocolate">
               <h3 class="special__title">Шоколадки даром!</h3>
               <p class="special__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку <br>
                 вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a href="catalog.html" class="btn special__btn">Хочу шоколадки!</a>
+              <a href="catalog.html" class="btn special__btn" aria-label="Перейти в каталог">Хочу шоколадки!</a>
             </li>
           </ul>
       </section>
@@ -204,9 +204,9 @@
                   </svg>
                 </div>
                 <img class="products__img" src="img/products/product1.jpg" alt="" width="267" height="267">
-                <p class="products__price" aria-label="Цена">310 <span class="currency">₽</span><span class="unit">/кг</span></p>
+                <p class="products__price">310 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <h3 class="products__title">
                 <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с апельсиновым <br>
                   джемом и цитрусовой стружкой</a>
               </h3>
@@ -219,9 +219,9 @@
                   </svg>
                 </div>
                 <img class="products__img" src="img/products/product2.jpg" alt="" width="267" height="267">
-                <p class="products__price" aria-label="Цена">380 <span class="currency">₽</span><span class="unit">/кг</span></p>
+                <p class="products__price">380 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-кофейное с кусочками шоколада">
+              <h3 class="products__title">
                 <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-кофейное с кусочками шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара">Быстрый просмотр</button>
@@ -233,9 +233,9 @@
                   </svg>
                 </div>
                 <img class="products__img" src="img/products/product3.jpg" alt="" width="267" height="267">
-                <p class="products__price" aria-label="Цена">355 <span class="currency">₽</span><span class="unit">/кг</span></p>
+                <p class="products__price">355 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-клубничное с присыпкой из белого шоколада">
+              <h3 class="products__title">
                 <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-клубничное <br> с присыпкой из белого шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара">Быстрый просмотр</button>
@@ -247,9 +247,9 @@
                   </svg>
                 </div>
                 <img class="products__img" src="img/products/product4.jpg" alt="" width="267" height="267">
-                <p class="products__price" aria-label="Цена">415 <span class="currency">₽</span><span class="unit">/кг</span></p>
+                <p class="products__price">415 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное крем-брюле с карамельной подливкой">
+              <h3 class="products__title">
                 <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное крем-брюле
                   <br> с карамельной подливкой</a>
               </h3>
@@ -345,7 +345,7 @@
               <a class="contacts__link" href="tel:+78124502525">8 812 450-25-25</a><br>
               (с 10 до 20 ежедневно)
             </p>
-            <button class="btn contacts__btn" aria-label="Открыть форму обратной связи">Форма обратной связи</button>
+            <button class="btn contacts__btn" type="button" aria-label="Открыть форму обратной связи">Форма обратной связи</button>
           </div>
         </section>
       </div>
@@ -448,13 +448,13 @@
             </svg>
         </div>
         <form action="#" class="modal-feedback__form" method="GET">
-            <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name" placeholder="Имя Фамилия" required>
+            <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name" placeholder="Имя Фамилия" aria-invalid="true" required>
             <label class="visually-hidden" for="input-feedback-name">Имя Фамилия</label>
 
-            <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="feedback-email" placeholder="email@example.com" required>
+            <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="feedback-email" placeholder="email@example.com" aria-invalid="true" required>
             <label class="visually-hidden" for="input-feedback-email">Email</label>
 
-            <textarea class="field modal-feedback__field modal-feedback__field--message" name="feedback-message" id="input-feedback-message" rows="7" placeholder="В свободной форме" required></textarea>
+            <textarea class="field modal-feedback__field modal-feedback__field--message" name="feedback-message" id="input-feedback-message" rows="7" placeholder="В свободной форме" aria-invalid="true" required></textarea>
             <label class="visually-hidden" for="input-feedback-message">Текст сообщения</label>
 
             <button class="btn modal-feedback__btn" type="submit">Отправить</button>
