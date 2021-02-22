@@ -1648,6 +1648,11 @@ a {
   appearance: none;
 }
 
+.custom-select::-ms-expand {
+  display: none;
+}
+
+
 .custom-select:hover {
   color: var(--basic-dark);
   background: var(--btn-tiny-color) url("../img/icons/select-arrow-black.svg") 170px 50% no-repeat;
