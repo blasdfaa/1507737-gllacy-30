@@ -956,7 +956,8 @@ a {
   display: block;
 }
 
-.products__item:hover .products__content {
+.products__item:hover .products__content,
+.products__item:hover .products__title {
   z-index: 2;
 }
 
@@ -1006,7 +1007,7 @@ a {
   line-height: 22px;
   color: var(--basic-white);
   cursor: pointer;
-  z-index: 2;
+
 }
 
 .products__link:hover,
@@ -1273,6 +1274,10 @@ a {
 .contacts__btn:active {
   background: var(--btn-active-color);
   box-shadow: inset 0 2px 2px var(--btn-shadow-active-color);
+}
+
+.contacts__hint {
+  box-shadow: 0 0 0 20px black;
 }
 
 /*Map*/
