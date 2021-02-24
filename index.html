@@ -65,10 +65,12 @@
                 <span class="visually-hidden">Поиск</span>
             </button>
             <div class="popup-search">
-              <form action="#" method="GET">
-                <input class="field popup-search__field" type="text" id="search" placeholder="Крем-брюле">
-                <label class="visually-hidden" for="search">Поиск по сайту</label>
-              </form>
+              <div class="popup-search__inner">
+                <form action="#" method="GET">
+                  <input class="field popup-search__field" type="text" id="search" name="input-search" placeholder="Крем-брюле">
+                  <label class="visually-hidden" for="search">Поиск по сайту</label>
+                </form>
+              </div>
             </div>
 
             <button class="btn user-nav__btn user-nav__btn--login" type="button">
@@ -80,7 +82,7 @@
             </button>
             <div class="popup-login">
               <form action="#" method="post" class="popup-login__form">
-                  <input type="email" class="field popup-login__field" id="input-login" name="login" placeholder="email@example.com" aria-invalid="true" required>
+                  <input type="email" class="field popup-login__field" id="input-login" name="user-email" placeholder="email@example.com" aria-invalid="true" required>
                   <label for="input-login" class="visually-hidden">Email</label>
 
                   <input type="password" class="field popup-login__field" id="input-password" name="password" placeholder="••••••" aria-invalid="true" required>
@@ -207,7 +209,7 @@
                 <p class="products__price">310 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
               <h3 class="products__title">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с апельсиновым <br>
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым <br>
                   джемом и цитрусовой стружкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -222,7 +224,7 @@
                 <p class="products__price">380 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
               <h3 class="products__title">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-кофейное с кусочками шоколада</a>
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
             </li>
@@ -236,7 +238,7 @@
                 <p class="products__price">355 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
               <h3 class="products__title">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-клубничное <br> с присыпкой из белого шоколада</a>
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное <br> с присыпкой из белого шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
             </li>
@@ -250,7 +252,7 @@
                 <p class="products__price">415 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
               <h3 class="products__title">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное крем-брюле
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное крем-брюле с карамельной подливко">Сливочное крем-брюле
                   <br> с карамельной подливкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -438,8 +440,8 @@
         </div>
     </footer>
 
-    <div class="overlay overlay--hide">
-      <div class="modal modal-feedback modal-feedback--hide">
+    <div class="overlay">
+      <div class="modal modal-feedback">
        <div class="modal-feedback__wrapper">
         <h3 class="modal-feedback__title">Мы обязательно вам ответим!</h3>
         <div class="modal-feedback__close modal-feedback__close--hide" aria-label="Закрыть окно">
@@ -447,11 +449,11 @@
             <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#231F20"/>
             </svg>
         </div>
-        <form action="#" class="modal-feedback__form" method="GET">
+        <form action="https://echo.htmlacademy.ru" class="modal-feedback__form" method="GET">
             <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name" placeholder="Имя Фамилия" aria-invalid="true" required>
             <label class="visually-hidden" for="input-feedback-name">Имя Фамилия</label>
 
-            <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="feedback-email" placeholder="email@example.com" aria-invalid="true" required>
+            <input type="email" class="field modal-feedback__field" id="input-feedback-email" name="user-email" placeholder="email@example.com" aria-invalid="true" required>
             <label class="visually-hidden" for="input-feedback-email">Email</label>
 
             <textarea class="field modal-feedback__field modal-feedback__field--message" name="feedback-message" id="input-feedback-message" rows="7" placeholder="В свободной форме" aria-invalid="true" required></textarea>
@@ -464,7 +466,8 @@
       </div>
     </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

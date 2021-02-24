@@ -118,6 +118,7 @@
   padding: 0;
   color: var(--basic-white);
   min-height: 100%;
+  min-width: 1200px;
 }
 
 img {
@@ -208,10 +209,26 @@ a {
 .modal {
   position: absolute;
   top: 338px;
-  left: 50%;
-  transform: translate(-50%);
+  left: 714px;
   background-color: var(--section-bg-color);
   border-radius: 6px;
+}
+
+@keyframes modalShake{
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(0);
+  }
+}
+
+.modal--error {
+  animation-name: modalShake;
+  animation-duration: 0.6s;
 }
 
 /* Body themes */
@@ -265,14 +282,19 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0 0 7px;
+  padding: 0 0 1px;
   list-style: none;
 
 }
 
 .menu__item {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  min-height: 30px;
+  border-radius: 26px;
 }
 
 .menu__item:not(:last-child) {
@@ -280,11 +302,8 @@ a {
 }
 
 .menu__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 30px;
   padding: 6px 13px;
+  margin-bottom: 7px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -294,7 +313,9 @@ a {
 }
 
 .menu__link:hover,
-.menu__link:focus {
+.menu__link:focus,
+.menu__item:hover .menu__link,
+.menu__item:focus-within .menu__link {
   background-color: var(--basic-white);
   color: var(--basic-dark);
 }
@@ -322,7 +343,7 @@ a {
   position: absolute;
   top: 37px;
   left: -8px;
-  width: 143px;
+  min-width: 143px;
   background: var(--basic-white);
   box-shadow: 0 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
@@ -388,14 +409,10 @@ a {
 
 /* test */
 
-.menu__item:hover .dropdown {
-  display: block;
-}
-
+.menu__item:hover .dropdown,
 .menu__item:focus-within .dropdown {
   display: block;
 }
-
 /* User navigation */
 
 .user-nav {
@@ -406,6 +423,9 @@ a {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.user-nav__wrapper {
   padding-bottom: 5px;
 }
 
@@ -442,7 +462,8 @@ a {
 
 .user-nav__btn:hover,
 .user-nav__btn:active,
-.user-nav__btn:focus {
+.user-nav__btn:focus,
+.popup-search:hover .user-nav__btn {
   background-color: var(--basic-white);
   color: var(--basic-dark);
 }
@@ -488,7 +509,6 @@ a {
   background-color: var(--section-bg-color);
   box-shadow: 0 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
-  z-index: 2;
   transition: all .1s;
 }
 
@@ -497,6 +517,14 @@ a {
   height: 44px;
   font-size: 14px;
   border-radius: 4px;
+}
+
+/*.popup-search--active {*/
+/*  display: block;*/
+/*}*/
+
+.user-nav__btn--search:hover + .popup-search {
+  display: block;
 }
 
 .popup-login {
@@ -573,6 +601,10 @@ a {
 .popup-login__link:active .base-link {
   color: var(--modal-link-hover);
   border-color: var(--modal-border-hover-color);
+}
+
+.user-nav__btn--login:hover + .popup-login {
+  display: block;
 }
 
 .popup-cart {
@@ -703,6 +735,10 @@ a {
 .popup-cart__btn:active {
   background: var(--btn-active-color);
   box-shadow: inset 0 2px 2px var(--btn-shadow-active-color);
+}
+
+.user-nav__btn--cart:hover + .popup-cart {
+  display: block;
 }
 
 /* Information */
@@ -1296,17 +1332,14 @@ a {
 /* Modal feedback */
 
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
-  z-index: 1;
-}
-
-.overlay--hide {
-  display: none;
+  z-index: 3;
 }
 
 .overlay--show {
@@ -1314,16 +1347,30 @@ a {
 }
 
 .modal-feedback {
+  display: none;
   position: fixed;
   max-width: 477px;
 }
 
-.modal-feedback--hide {
-  display: none;
+@keyframes modalBounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modal-feedback--show {
   display: block;
+  animation-name: modalBounce;
+  animation-duration: 0.6s;
 }
 
 .modal-feedback__wrapper {
@@ -1413,7 +1460,6 @@ a {
 
 .page-footer__container--catalog {
   padding-top: 19px;
-
 }
 
 /* Social */
@@ -1560,6 +1606,7 @@ a {
 .breadcrumbs__item:not(:last-child)::after {
   content: '';
   display: inline-block;
+  vertical-align: middle;
   padding-left: 7px;
   margin: 0 8px;
   width: 6px;
