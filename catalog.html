@@ -95,7 +95,7 @@
           </div>
 
           <div class="popup-cart">
-            <form action="#" class="popup-cart__form">
+            <form method="post" action="#" class="popup-cart__form">
               <ul class="popup-cart__list">
                 <li class="popup-cart__item">
                   <button  class="popup-cart__cross" aria-label="Удалить Пломбир с апельсиновым джемом из корзины" type="button">
@@ -166,12 +166,14 @@
             <form action="https://echo.htmlacademy.ru" method="GET" class="filter-form">
               <fieldset class="filter-group select">
                 <legend class="filter-label select__label">Сортировка:</legend>
+                <label>
                   <select name="sorting" id="filter-sorting" class="custom-select">
                     <option value="by-popularity">по популярности</option>
                     <option value="inexpensive-first">сначала недорогие</option>
                     <option value="expensive-first">сначала дорогие</option>
                     <option value="by-fat-content">по жирности</option>
                   </select>
+                </label>
               </fieldset>
 
             <fieldset class="filter-group price">
@@ -253,8 +255,8 @@
                 <img class="products__img" src="img/products/product1.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">310 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с апельсиновым <br>
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым <br>
                   джемом и цитрусовой стружкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -264,8 +266,8 @@
                 <img class="products__img" src="img/products/product2.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">380 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-кофейное с кусочками шоколада">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-кофейное с кусочками
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками
                   <br> шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -275,8 +277,8 @@
                 <img class="products__img" src="img/products/product3.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">355 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-клубничное с присыпкой из белого шоколада">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-клубничное с
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с
                   <br> присыпкой из белого шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -286,8 +288,8 @@
                 <img class="products__img" src="img/products/product4.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">415 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное крем-брюле с карамельной подливкой">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное крем-брюле
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле
                   <br> с карамельной подливкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -297,8 +299,8 @@
                 <img class="products__img" src="img/products/product5.jpg" a lt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">325 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с брусничным джемом">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с брусничным
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с брусничным джемом">Сливочное с брусничным
                   <br> джемом</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -308,8 +310,8 @@
                 <img class="products__img" src="img/products/product6.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">410 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-черничное с цельными ягодами черники ">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-черничное с цельными
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-черничное с цельными ягодами черники">Сливочно-черничное с цельными
                   <br> ягодами черники </a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -319,8 +321,8 @@
                 <img class="products__img" src="img/products/product7.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">315 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-лимонное с карамельной присыпкой">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-лимонное с
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-лимонное с карамельной присыпкой">Сливочно-лимонное с
                   <br> карамельной присыпкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -330,8 +332,8 @@
                 <img class="products__img" src="img/products/product8.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">320 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с шоколадной стружкой">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с шоколадной
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с шоколадной стружкой">Сливочное с шоколадной
                   <br> стружкой</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -341,8 +343,8 @@
                 <img class="products__img" src="img/products/product9.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">440 <span class="currency">₽</span><span class="unit">/кг</span>
               </div>
-              <h3 class="products__title" aria-label="Сливочно-ванильное с кусочками шоколада">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочно-ванильное
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочно-ванильное с кусочками шоколада">Сливочно-ванильное
                   <br> с кусочками шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -352,8 +354,8 @@
                 <img class="products__img" src="img/products/product10.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">435 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочноe с ментоловым сиропом">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочноe с ментоловым
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочноe с ментоловым сиропом">Сливочноe с ментоловым
                   <br> сиропом</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -363,8 +365,8 @@
                 <img class="products__img" src="img/products/product11.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">355 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с кусочками черного шоколада">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с кусочками черного
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с кусочками черного шоколада">Сливочное с кусочками черного
                   <br> шоколада</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
@@ -374,8 +376,8 @@
                 <img class="products__img" src="img/products/product12.jpg" alt="" width="267" height="267">
                 <p class="products__price" aria-label="Цена">420 <span class="currency">₽</span><span class="unit">/кг</span></p>
               </div>
-              <h3 class="products__title" aria-label="Сливочное с мятным сиропом">
-                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара">Сливочное с мятным сиропом</a>
+              <h3 class="products__title">
+                <a class="base-link products__link" href="#" aria-label="Перейти на страницу товара Сливочное с мятным сиропом">Сливочное с мятным сиропом</a>
               </h3>
               <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр</button>
             </li>
