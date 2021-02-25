@@ -12,14 +12,6 @@
 // });
 
 
-
-
-
-
-
-
-
-
 // Storage
 
 let inStorageSupport = true;
@@ -43,28 +35,26 @@ const overlay = document.querySelector('.overlay');
 const feedbackButton = document.querySelector('.contacts__btn');
 const feedbackForm = document.querySelector('.modal-feedback__form')
 
-const feedbackTitle = feedbackModal.querySelector('.modal-feedback__title')
 const feedbackClose = feedbackModal.querySelector('.modal-feedback__close');
 const emailInput = feedbackModal.querySelector('[name=user-email]');
 const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
 const messageInput = feedbackModal.querySelector('[name=feedback-message]');
 
 
-feedbackButton.addEventListener("click",(evt) => {
+feedbackButton.addEventListener("click", (evt) => {
   feedbackModal.classList.add('modal-feedback--show')
   overlay.classList.add('overlay--show')
-  feedbackTitle.innerText = 'Мы обязательно вам ответим!'
 
   if (userNameStorage) {
     userNameInput.value = userNameStorage
     emailInput.focus()
-  } else  {
+  } else {
     userNameInput.focus()
   }
   if (emailStorage) {
     emailInput.value = emailStorage
     messageInput.focus()
-  } else  {
+  } else {
     emailInput.focus()
   }
   if (messageStorage) {
@@ -73,7 +63,7 @@ feedbackButton.addEventListener("click",(evt) => {
   }
 });
 
-feedbackClose.addEventListener("click",() => {
+feedbackClose.addEventListener("click", () => {
   localStorage.setItem('user-name', userNameInput.value)
   localStorage.setItem('user-email', emailInput.value)
   localStorage.setItem('user-message', messageInput.value)
@@ -88,7 +78,6 @@ feedbackForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
     console.log('Ошибка! Есть незаполненные поля')
     feedbackModal.classList.add('modal-feedback--error')
-    feedbackTitle.innerText = 'Ошибка!'
   }
 
   localStorage.removeItem('user-name')
@@ -119,7 +108,7 @@ popupLoginBtn.addEventListener('mousemove', () => {
   if (popupEmailStorage) {
     popupEmailInput.value = popupEmailStorage
     passwordInput.focus()
-  } else  {
+  } else {
     popupEmailInput.focus()
   }
 });
@@ -133,18 +122,15 @@ loginForm.addEventListener('submit', (evt) => {
   }
 });
 
-loginForm.addEventListener('mouseout', () => {
+popupLogin.addEventListener('mouseout', () => {
   localStorage.setItem('popup-user-email', popupEmailInput.value)
+  popupEmailInput.blur()
+  passwordInput.blur()
 });
 
-// Cart
-
-const getTwoProducts = document.querySelector('.promo__btn');
-const cart = document.querySelector('.usermenu__link--cart');
-const cartText = document.querySelector('.usermenu__link--cart span');
-
-
-getTwoProducts.addEventListener('click', (evt) => {
-  cart.classList.add('usermenu__link--active')
-  cartText.innerHTML = '2 товара'
+popupLoginBtn.addEventListener('mouseout', () => {
+  popupEmailInput.blur()
+  passwordInput.blur()
 });
+
+
