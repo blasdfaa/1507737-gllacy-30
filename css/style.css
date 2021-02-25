@@ -95,6 +95,8 @@
   --price-range-toggle-color: #ABABAB;
   --price-range-toggle-border-color: #FFFFFF;
   --price-range-shadow-color: #ABABAB;
+
+  --outline-color: #F6B5A5;
 }
 
 
@@ -104,6 +106,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1px solid var(--outline-color);
 }
 
 .html {
@@ -171,11 +177,6 @@ a {
   transition: all .1s;
 }
 
-/*.btn:focus:not(:focus-visible) {*/
-/*  outline: none;*/
-/*}*/
-
-
 /* Input */
 
 .field {
@@ -207,9 +208,10 @@ a {
 /* Modal */
 
 .modal {
-  position: absolute;
-  top: 338px;
-  left: 714px;
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--section-bg-color);
   border-radius: 6px;
 }
@@ -325,19 +327,21 @@ a {
   position: absolute;
   top: 37px;
   left: -8px;
-  min-width: 143px;
+  width: 143px;
+  flex-direction: column;
   background: var(--basic-white);
   box-shadow: 0 20px 20px var(--modal-shadow-color);
   border-radius: 4px;
   transition: all .1s;
-  z-index: 1;
+  z-index: 2;
   margin: 0;
   padding: 2px 0 7px;
   color: var(--basic-dark);
   list-style: none;
+  overflow: hidden;
 }
 
-.dropdown::before  {
+.dropdown::before {
   position: absolute;
   content: '';
   top: 37px;
@@ -389,7 +393,7 @@ a {
 
 .menu__item:hover .dropdown,
 .menu__item:focus-within .dropdown {
-  display: block;
+  display: flex;
 }
 
 /* User navigation */
@@ -1000,7 +1004,9 @@ a {
 }
 
 .products__item:hover .products__content,
-.products__item:hover .products__title {
+.products__item:hover .products__title,
+.products__item:focus-within .products__content,
+.products__item:focus-within .products__title {
   z-index: 2;
 }
 
@@ -1357,17 +1363,11 @@ a {
 }
 
 @keyframes modalBounce {
-  0% {
-    transform: translateY(-2000px);
+  from {
+    transform: translateX(-50%) translateY(-2000px);
   }
-  70% {
-    transform: translateY(30px);
-  }
-  90% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
+  to {
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
@@ -1379,13 +1379,13 @@ a {
 
 @keyframes modalShake{
   0%, 100% {
-    transform: translateX(0);
+    transform: translateY(-50%) translateX(-50%);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
+    transform: translateY(-50%) translateX(-55%);
   }
   20%, 40%, 60%, 80% {
-    transform: translateX(10px);
+    transform: translateY(-50%) translateX(-50%);
   }
 }
 
@@ -1720,7 +1720,6 @@ a {
   display: none;
 }
 
-
 .custom-select:hover {
   color: var(--basic-dark);
   background: var(--btn-tiny-color) url("../img/icons/select-arrow-black.svg") 170px 50% no-repeat;
@@ -1808,6 +1807,10 @@ a {
 }
 
 /*Fat*/
+
+.fat__list:focus-within {
+ outline: 1px solid var(--dropdown-active-color);
+}
 
 .fat__list {
   padding: 10px 18px 8px 14px;

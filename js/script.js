@@ -53,6 +53,7 @@ const messageInput = feedbackModal.querySelector('[name=feedback-message]');
 feedbackButton.addEventListener("click",(evt) => {
   feedbackModal.classList.add('modal-feedback--show')
   overlay.classList.add('overlay--show')
+  feedbackTitle.innerText = 'Мы обязательно вам ответим!'
 
   if (userNameStorage) {
     userNameInput.value = userNameStorage
@@ -68,8 +69,6 @@ feedbackButton.addEventListener("click",(evt) => {
   }
   if (messageStorage) {
     messageInput.value = messageInput
-    userNameInput.focus()
-  } else {
     userNameInput.focus()
   }
 });
@@ -89,7 +88,7 @@ feedbackForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
     console.log('Ошибка! Есть незаполненные поля')
     feedbackModal.classList.add('modal-feedback--error')
-    feedbackTitle.innerHTML = 'Ошибка!'
+    feedbackTitle.innerText = 'Ошибка!'
   }
 
   localStorage.removeItem('user-name')
@@ -132,6 +131,10 @@ loginForm.addEventListener('submit', (evt) => {
   } else {
     localStorage.setItem('popup-user-email', popupEmailInput.value)
   }
+});
+
+loginForm.addEventListener('mouseout', () => {
+  localStorage.setItem('popup-user-email', popupEmailInput.value)
 });
 
 // Cart
