@@ -109,7 +109,7 @@ window.addEventListener('keyup', (evt) => {
 
 // Popup login
 
-const popupLoginBtn = document.querySelector('.user-nav__btn--login');
+const popupLoginBtn = document.querySelector('.usermenu__link--login');
 const popupLogin = document.querySelector('.popup-login');
 
 const loginForm = popupLogin.querySelector('.popup-login__form');
@@ -134,3 +134,14 @@ loginForm.addEventListener('submit', (evt) => {
   }
 });
 
+// Cart
+
+const getTwoProducts = document.querySelector('.promo__btn');
+const cart = document.querySelector('.usermenu__link--cart');
+const cartText = document.querySelector('.usermenu__link--cart span');
+
+
+getTwoProducts.addEventListener('click', (evt) => {
+  cart.classList.add('usermenu__link--active')
+  cartText.innerHTML = '2 товара'
+});
