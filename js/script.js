@@ -30,6 +30,7 @@ let messageStorage;
 try {
   userNameStorage = localStorage.getItem('user-name')
   emailStorage = localStorage.getItem('user-email')
+  popupEmailStorage = localStorage.getItem('popup-user-email')
   messageStorage = localStorage.getItem('user-message')
 } catch (err) {
   inStorageSupport = false;
@@ -42,6 +43,7 @@ const overlay = document.querySelector('.overlay');
 const feedbackButton = document.querySelector('.contacts__btn');
 const feedbackForm = document.querySelector('.modal-feedback__form')
 
+const feedbackTitle = feedbackModal.querySelector('.modal-feedback__title')
 const feedbackClose = feedbackModal.querySelector('.modal-feedback__close');
 const emailInput = feedbackModal.querySelector('[name=user-email]');
 const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
@@ -79,14 +81,15 @@ feedbackClose.addEventListener("click",() => {
 
   feedbackModal.classList.remove('modal-feedback--show')
   overlay.classList.remove('overlay--show')
-  feedbackModal.classList.remove('modal--error')
+  feedbackModal.classList.remove('modal-feedback--error')
 });
 
 feedbackForm.addEventListener('submit', (evt) => {
   if (!userNameInput.value || !emailInput.value || !messageInput.value) {
     evt.preventDefault()
     console.log('Ошибка! Есть незаполненные поля')
-    feedbackModal.classList.add('modal--error')
+    feedbackModal.classList.add('modal-feedback--error')
+    feedbackTitle.innerHTML = 'Ошибка!'
   }
 
   localStorage.removeItem('user-name')
@@ -104,4 +107,30 @@ window.addEventListener('keyup', (evt) => {
   }
 });
 
+// Popup login
+
+const popupLoginBtn = document.querySelector('.user-nav__btn--login');
+const popupLogin = document.querySelector('.popup-login');
+
+const loginForm = popupLogin.querySelector('.popup-login__form');
+const popupEmailInput = popupLogin.querySelector('[name=user-email]');
+const passwordInput = popupLogin.querySelector('[name=password]');
+
+popupLoginBtn.addEventListener('mousemove', () => {
+  if (popupEmailStorage) {
+    popupEmailInput.value = popupEmailStorage
+    passwordInput.focus()
+  } else  {
+    popupEmailInput.focus()
+  }
+});
+
+loginForm.addEventListener('submit', (evt) => {
+  if (!popupEmailInput.value || !passwordInput.value) {
+    evt.preventDefault()
+    console.log('Ошибка! Есть незаполненные поля')
+  } else {
+    localStorage.setItem('popup-user-email', popupEmailInput.value)
+  }
+});
 
