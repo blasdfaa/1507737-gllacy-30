@@ -1,18 +1,14 @@
-//
-// const searchBtn = document.querySelector('.user-nav__btn--search');
-// const searchPopup = document.querySelector('.popup-search');
-// const closePopup = document.querySelector('.user-nav');
-//
-// searchBtn.addEventListener('mousemove', () => {
-//   searchPopup.classList.add('popup-search--active')
-// });
-//
-// document.addEventListener('mouseout', () => {
-//   searchPopup.classList.remove('popup-search--active')
-// });
+// Feedback modal
 
+const feedbackModal = document.querySelector('.modal-feedback');
+const overlay = document.querySelector('.overlay');
+const feedbackButton = document.querySelector('.contacts__btn');
+const feedbackForm = document.querySelector('.modal-feedback__form')
 
-// Storage
+const feedbackClose = feedbackModal.querySelector('.modal-feedback__close');
+const emailInput = feedbackModal.querySelector('[name=user-email]');
+const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
+const messageInput = feedbackModal.querySelector('[name=feedback-message]');
 
 let inStorageSupport = true;
 let userNameStorage;
@@ -27,19 +23,6 @@ try {
 } catch (err) {
   inStorageSupport = false;
 }
-
-// Feedback modal
-
-const feedbackModal = document.querySelector('.modal-feedback');
-const overlay = document.querySelector('.overlay');
-const feedbackButton = document.querySelector('.contacts__btn');
-const feedbackForm = document.querySelector('.modal-feedback__form')
-
-const feedbackClose = feedbackModal.querySelector('.modal-feedback__close');
-const emailInput = feedbackModal.querySelector('[name=user-email]');
-const userNameInput = feedbackModal.querySelector('[name=feedback-name]');
-const messageInput = feedbackModal.querySelector('[name=feedback-message]');
-
 
 feedbackButton.addEventListener("click", (evt) => {
   feedbackModal.classList.add('modal-feedback--show')
@@ -58,7 +41,7 @@ feedbackButton.addEventListener("click", (evt) => {
     emailInput.focus()
   }
   if (messageStorage) {
-    messageInput.value = messageInput
+    messageInput.value = messageStorage
     userNameInput.focus()
   }
 });
@@ -76,7 +59,8 @@ feedbackClose.addEventListener("click", () => {
 feedbackForm.addEventListener('submit', (evt) => {
   if (!userNameInput.value || !emailInput.value || !messageInput.value) {
     evt.preventDefault()
-    console.log('Ошибка! Есть незаполненные поля')
+    feedbackModal.classList.remove('modal-feedback--error')
+    feedbackModal.offsetWidth = feedbackModal.offsetWidth
     feedbackModal.classList.add('modal-feedback--error')
   }
 

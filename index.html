@@ -7,7 +7,7 @@
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Глейси</title>
 </head>
@@ -247,8 +247,8 @@
           </div>
           <h3 class="products__title">
             <a class="base-link products__link" href="#"
-               aria-label="Перейти на страницу товара Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное
-              <br> с присыпкой из белого шоколада</a>
+               aria-label="Перейти на страницу товара Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное <br>
+              с присыпкой из белого шоколада</a>
           </h3>
           <button class="btn products__btn" aria-label="Открыть окно просмотра товара" type="button">Быстрый просмотр
           </button>
@@ -533,14 +533,14 @@
   <div class="modal modal-feedback">
     <div class="modal-feedback__wrapper">
       <h3 class="modal-feedback__title">Мы обязательно вам ответим!</h3>
-      <div class="modal-feedback__close modal-feedback__close--hide" aria-label="Закрыть окно">
+      <button class="btn modal-feedback__close" aria-label="Закрыть окно">
         <svg aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="none"
              xmlns="http://www.w3.org/2000/svg">
           <path
             d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z"
             fill="#231F20"/>
         </svg>
-      </div>
+      </button>
       <form action="https://echo.htmlacademy.ru" class="modal-feedback__form" method="GET">
         <input type="text" class="field modal-feedback__field" id="input-feedback-name" name="feedback-name"
                placeholder="Имя Фамилия" aria-invalid="true">
