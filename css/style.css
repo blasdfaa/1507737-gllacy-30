@@ -98,9 +98,9 @@
 
   --outline-color: #F6B5A5;
 
-  --reserve-crimson-bg-color: #dc143c;
+  --reserve-crimson-bg-color: #9f2d47;
   --reserve-chocolate-bg-color: #6f5242;
-  --reserve-strawberry-bg-color: #9f2d47;
+  --reserve-blog-bg-color: #fff;
 }
 
 
@@ -786,9 +786,9 @@ a {
 
 .page-header__info {
   grid-column: 3 / 4;
+  grid-row: 1 / -1;
   max-width: 170px;
-  padding-top: 2px;
-  margin-bottom: -115px;
+  margin: 66px 0 -115px;
   justify-self: end;
   z-index: 1;
 }
@@ -1159,6 +1159,7 @@ a {
 
 .features__item {
   display: flex;
+  align-items: start;
 }
 
 .features__img {
@@ -1186,7 +1187,7 @@ a {
 
 .blog-notice {
   padding: 20px 20px;
-  background: url('../img/bg/strawberry.jpg') center center/cover no-repeat, var(--reserve-strawberry-bg-color);
+  background: url('../img/bg/strawberry.jpg') center center/cover no-repeat, var( --reserve-blog-bg-color);
   border-radius: 16px;
 }
 
@@ -1207,20 +1208,20 @@ a {
   line-height: 30px;
   color: var(--basic-dark);
   text-decoration: underline;
+  border-bottom: none;
 }
 
 .blog-notice__link:hover,
 .blog-notice__link:active,
 .blog-notice__link:focus {
   color: var(--modal-link-hover);
-  border-bottom: none;
 }
 
 /* Subcribe form */
 
 .subscribe {
   padding: 5px 6px;
-  background: url('../img/bg/subscribe.jpg') center center/cover no-repeat, var(--section-bg-color) ;
+  background: url('../img/bg/subscribe.jpg') center center/cover no-repeat, var(--section-bg-color);
   border-radius: 16px;
 }
 
