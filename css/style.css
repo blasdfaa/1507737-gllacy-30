@@ -861,7 +861,8 @@ a {
 }
 
 .promo__btn {
-  padding: 9px 30px;
+  padding: 9px 23px;
+  margin-right: 14px;
   min-height: 62px;
   max-width: 500px;
   border-radius: 70px;
@@ -936,6 +937,7 @@ a {
 .special__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content 1fr min-content;
   padding: 15px 22px 22px 17px;
   border-radius: 16px;
 }
@@ -947,7 +949,7 @@ a {
 
 .special__item--chocolate {
   grid-column: 2 / 3;
-  background: url('../img/bg/сhocolate.jpg') center center/cover no-repeat, var(--reserve-chocolate-bg-color);
+  background: url('../img/bg/chocolate.jpg') center center/cover no-repeat, var(--reserve-chocolate-bg-color);
 }
 
 .special__title {
@@ -1030,8 +1032,8 @@ a {
   transition: all .1s;
 }
 
-.products__item:hover:before,
-.products__item:focus-within:before,
+.products__item:hover::before,
+.products__item:focus-within::before,
 .products__item:hover .products__btn,
 .products__item:focus-within .products__btn {
   display: block;
@@ -1824,7 +1826,7 @@ a {
   transform: scale(1.1);
 }
 
-.price__controls .toggle:before {
+.price__controls .toggle::before {
   content: '';
   position: absolute;
   top: 50%;
